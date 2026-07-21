@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Doriane Pin — Pilote automobile française | F1 Academy, LMP2 &amp; Mercedes-AMG F1</title>
+<meta name="description" content="Doriane Pin, pilote automobile française : championne du monde F1 Academy 2025, pilote de développement Mercedes-AMG PETRONAS F1 Team, titulaire LMP2 en ELMS et aux 24 Heures du Mans chez Duqueine." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#000000" />
+<link rel="canonical" href="https://dorianepin.netlify.app/" />
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="Doriane Pin" />
+<meta property="og:title" content="Doriane Pin — Pilote automobile française" />
+<meta property="og:description" content="Championne du monde F1 Academy 2025. Pilote de développement Mercedes-AMG PETRONAS F1 Team. LMP2 en ELMS et aux 24 Heures du Mans chez Duqueine." />
+<meta property="og:image" content="https://dorianepin.netlify.app/assets/merc_car_front.jpg" />
+<meta property="og:url" content="https://dorianepin.netlify.app/" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Doriane Pin — Pilote automobile française" />
+<meta name="twitter:description" content="Championne du monde F1 Academy 2025 · Mercedes-AMG PETRONAS F1 · LMP2 Duqueine" />
+<meta name="twitter:image" content="https://dorianepin.netlify.app/assets/merc_car_front.jpg" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Doriane Pin","url":"https://dorianepin.netlify.app/","image":"https://dorianepin.netlify.app/assets/doriane_profil_v3.png","nationality":"Française","birthDate":"2004-01-06","birthPlace":"Ivry-sur-Seine, France","jobTitle":"Pilote automobile","description":"Championne du monde F1 Academy 2025, pilote de développement Mercedes-AMG PETRONAS F1 Team et pilote titulaire LMP2 en ELMS et aux 24 Heures du Mans chez Duqueine Team.","affiliation":[{"@type":"SportsOrganization","name":"Mercedes-AMG PETRONAS F1 Team"},{"@type":"SportsOrganization","name":"Duqueine Team"},{"@type":"SportsOrganization","name":"Peugeot TotalEnergies"},{"@type":"SportsOrganization","name":"Citroën Racing"}],"sameAs":["https://www.instagram.com/dorianepin/"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* ============== HERO ============== */
+  .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; }
+  .hero__media { position: absolute; inset: 0; z-index: 0; }
+  .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; display:block; }
+  /* universal photo fill */
+  .ph { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+  .hero__scrim {
+    position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      linear-gradient(rgba(0,0,0,.24), rgba(0,0,0,.24)),
+      linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 46%, rgba(0,0,0,.74) 100%),
+      linear-gradient(75deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 62%);
+  }
+  .hero__inner {
+    position: relative; z-index: 2;
+    flex: 1; display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 var(--gut) clamp(40px, 7vh, 92px);
+    max-width: var(--maxw); margin-inline: auto; width: 100%;
+  }
+  .hero__name {
+    font-size: clamp(64px, 17.5vw, 280px);
+    font-weight: 200;
+    margin: 18px 0 0;
+  }
+  .hero__name .pin { color: var(--teal); display: block; }
+  .hero__sub {
+    display: flex; flex-wrap: wrap; gap: 10px 30px; align-items: baseline;
+    margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--line);
+  }
+  .hero__sub .stat { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-dim); }
+  .hero__sub .stat b { color: var(--ink); font-weight: 500; }
+  .hero__partners { display: flex; flex-wrap: wrap; gap: 14px 26px; align-items: center; margin-top: 22px; }
+  .hero__partners span { font-family: var(--f-display); font-weight:300; font-size: 12px; letter-spacing:.22em; text-transform: uppercase; color: var(--ink-faint); position: relative; }
+  .hero__partners span + span::before { content:"·"; position:absolute; left:-15px; color: var(--teal); }
+  .scrollcue {
+    position: absolute; left: var(--gut); bottom: clamp(40px,7vh,92px); z-index: 2;
+    writing-mode: vertical-rl; font-family: var(--f-mono); font-size: 10.5px;
+    letter-spacing: .3em; text-transform: uppercase; color: var(--ink-faint);
+    display: flex; align-items: center; gap: 12px;
+  }
+  @media (max-width: 760px){ .scrollcue { display:none; } .hero__partners{ display:none; } }
+
+  /* ============== INTRO ============== */
+  .intro-grid { display: grid; grid-template-columns: 1fr; gap: clamp(40px,5vw,80px); }
+  @media (min-width: 900px){ .intro-grid { grid-template-columns: 1.08fr 0.92fr; align-items: stretch; } }
+  .intro-body p { color: var(--ink-dim); max-width: 46ch; }
+  .intro-body p + p { margin-top: 1.1em; }
+  .intro-portrait { position: relative; align-self: end; width: 100%; max-width: 430px; margin-inline: auto; }
+  .intro-portrait::before {
+    content: ""; position: absolute; top: 0; right: 0;
+    width: 56%; height: 47%; background: var(--teal); z-index: 0;
+  }
+  .intro-portrait img { position: relative; z-index: 1; display: block; width: 100%; height: auto; }
+  .intro-portrait .ip-credit {
+    position: relative; z-index: 1; display: block; margin-top: 10px;
+    font-family: var(--f-mono); font-size: 10px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  @media (min-width: 900px){
+    .intro-portrait { align-self: stretch; max-width: none; margin: 0; min-height: 520px; }
+    .intro-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: bottom right; }
+    .intro-portrait .ip-credit { position: absolute; left: 0; bottom: 4px; margin: 0; max-width: 40%; }
+  }
+  /* full-width fact band */
+  .intro-facts { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: clamp(44px,6vw,80px); }
+  @media (min-width: 760px){ .intro-facts { grid-template-columns: repeat(4,1fr); } }
+  .intro-facts .ff { background: var(--bg); padding: clamp(20px,2vw,28px) clamp(20px,2vw,26px); display: flex; flex-direction: column; gap: 11px; }
+  .intro-facts .ff .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); }
+  .intro-facts .ff .v { font-family: var(--f-display); font-weight: 300; font-size: clamp(15px,1.4vw,19px); letter-spacing: .03em; line-height: 1.2; }
+  .intro-facts .ff .v.accent { color: var(--teal); }
+  .fact-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .fact-list .row {
+    display: grid; grid-template-columns: 1fr auto; gap: 20px;
+    padding: 17px 0; border-bottom: 1px solid var(--line);
+  }
+  .fact-list .k { font-family: var(--f-mono); font-size: 11.5px; letter-spacing:.16em; text-transform: uppercase; color: var(--ink-faint); align-self:center; }
+  .fact-list .v { font-family: var(--f-display); font-weight: 300; font-size: clamp(15px,1.5vw,19px); letter-spacing:.04em; text-align: right; }
+  .fact-list .v.accent { color: var(--teal); }
+
+  /* ============== NEWS ============== */
+  .sec-head { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px 40px; margin-bottom: clamp(40px,6vh,72px); }
+  .sec-head h2 { font-size: clamp(34px,5.5vw,76px); }
+  @media (max-width: 720px){ .sec-head { grid-template-columns: 1fr; } }
+  .news-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  @media (min-width: 700px){ .news-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (min-width: 1200px){ .news-grid { grid-template-columns: repeat(4,1fr); } }
+  .news-card { background: var(--bg); padding: clamp(28px,3vw,46px); display: flex; flex-direction: column; gap: 18px; min-height: 380px; transition: background .4s; }
+  .news-card:hover { background: var(--bg-card); }
+  .news-card .card-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 50px; }
+  .news-card .card-logo { height: 46px; width: auto; max-width: 64%; object-fit: contain; object-position: left center; display: block; }
+  .news-card .card-logo.peugeot { height: 30px; }
+  .news-card .card-logo.duqueine { height: 54px; }
+  .news-card .card-logo.citroen { height: 32px; }
+  .news-card .tag { font-family: var(--f-mono); font-size: 11px; letter-spacing:.22em; text-transform: uppercase; color: var(--teal); }
+  .news-card .idx { font-family: var(--f-mono); font-size: 11px; color: var(--ink-faint); }
+  .news-card h3 { font-family: var(--f-display); font-weight: 300; font-size: clamp(22px,2.3vw,30px); line-height: 1.12; letter-spacing:.02em; text-transform: uppercase; margin: 0; }
+  .news-card p { color: var(--ink-dim); font-size: 15.5px; margin: 0; }
+  .news-card .foot { margin-top: auto; font-family: var(--f-mono); font-size: 11px; letter-spacing:.14em; text-transform: uppercase; color: var(--ink-faint); padding-top: 18px; border-top: 1px solid var(--line); }
+
+  /* ============== CALENDAR ============== */
+  .cal-head { display:block; margin-bottom: 44px; }
+  .cal-head h2 { max-width: 20ch; margin-top: 22px; }
+  .cal-head .cal-note { display:block; margin-top: 22px; }
+  .cal { border-top: 1px solid var(--line); }
+  .cal-row {
+    display: grid; grid-template-columns: 56px 132px 1fr 1fr 64px;
+    align-items: center; gap: 18px;
+    padding: 22px 8px; border-bottom: 1px solid var(--line);
+    transition: background .35s, padding-left .35s;
+  }
+  .cal-row:hover { background: var(--bg-card); padding-left: 18px; }
+  .cal-row.test { opacity: .62; }
+  .cal-row .rnd { font-family: var(--f-display); font-weight: 300; font-size: 26px; color: var(--teal); }
+  .cal-row.test .rnd { font-family: var(--f-mono); font-size: 11px; letter-spacing:.16em; color: var(--ink-faint); }
+  .cal-row .date { font-family: var(--f-mono); font-size: 13px; letter-spacing:.1em; }
+  .cal-row .ev { font-family: var(--f-display); font-weight: 300; font-size: clamp(16px,1.8vw,22px); letter-spacing:.03em; text-transform: uppercase; }
+  .cal-row .track { color: var(--ink-dim); font-size: 14px; }
+  .cal-row .cc { font-family: var(--f-mono); font-size: 12px; letter-spacing:.14em; color: var(--ink-faint); text-align: right; }
+  @media (max-width: 820px){
+    .cal-row { grid-template-columns: 44px 1fr 50px; row-gap: 4px; }
+    .cal-row .date { grid-column: 2 / 3; }
+    .cal-row .ev   { grid-column: 2 / 4; }
+    .cal-row .track{ grid-column: 2 / 4; }
+    .cal-row .cc   { grid-column: 3 / 4; grid-row: 1; }
+    .cal-row .rnd  { grid-row: 1 / 3; }
+  }
+
+  /* ============== LE MANS ============== */
+  .lemans { position: relative; background: var(--bg-soft); border-block: 1px solid var(--line); }
+  .lemans-grid { display: grid; grid-template-columns: 1fr; gap: clamp(34px,5vw,72px); align-items: center; }
+  @media (min-width: 920px){ .lemans-grid { grid-template-columns: 1.1fr 1fr; } }
+  .lemans .media { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #0e0e10; box-shadow: inset 0 0 0 1px var(--line); }
+  .lemans .media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display:block; }
+  .lemans .big-date { font-family: var(--f-display); font-weight: 200; font-size: clamp(60px,9vw,132px); line-height:.92; letter-spacing:.02em; }
+  .lemans .big-date .mo { display:block; font-size: clamp(20px,2.4vw,30px); letter-spacing:.3em; color: var(--teal); margin-top: 14px; }
+  .lemans p { color: var(--ink-dim); max-width: 44ch; }
+  .lemans .meta { display:flex; gap: 34px; flex-wrap: wrap; margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--line); }
+  .lemans .meta div span { display:block; font-family: var(--f-mono); font-size: 10.5px; letter-spacing:.18em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 5px; }
+  .lemans .meta div b { font-family: var(--f-display); font-weight: 300; font-size: 18px; letter-spacing:.04em; }
+
+  /* ============== GALLERY ============== */
+  .gallery { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 760px){ .gallery { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; } }
+  .gallery figure { margin: 0; position: relative; overflow: hidden; background:#0e0e10; }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; object-position: center; display:block; }
+  .gallery .g-tall { grid-row: span 2; }
+  .gallery .g-wide { grid-column: span 2; }
+  .gallery figcaption { font-family: var(--f-mono); font-size: 10px; letter-spacing:.14em; text-transform: uppercase; color: var(--ink-faint); margin-top: 8px; }
+  @media (max-width: 759px){ .gallery figure { aspect-ratio: 1; } .gallery .g-tall, .gallery .g-wide { grid-column: span 2; } }
+
+  /* ============== PARTNERS ============== */
+
+
+  /* ============== INSTAGRAM ============== */
+  .ig-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: clamp(34px,5vh,56px); }
+  .ig-id { display: flex; align-items: center; gap: clamp(18px,2.5vw,30px); }
+  .ig-ring { width: clamp(64px,9vw,96px); height: clamp(64px,9vw,96px); border-radius: 50%; padding: 2.5px; background: var(--teal); flex-shrink: 0; }
+  .ig-ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 25%; border: 3px solid var(--bg); display: block; }
+  .ig-handle { display: block; font-family: var(--f-display); font-weight: 300; font-size: clamp(24px,3.4vw,40px); letter-spacing: .02em; }
+  .ig-handle:hover { color: var(--teal); }
+  .ig-stats { display: flex; gap: 26px; margin-top: 10px; flex-wrap: wrap; }
+  .ig-stats span { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .ig-stats b { color: var(--ink); font-weight: 500; }
+  .ig-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  @media (min-width: 760px){ .ig-grid { grid-template-columns: repeat(6,1fr); gap: 12px; } }
+  .ig-tile { position: relative; aspect-ratio: 1; overflow: hidden; background:#0e0e10; }
+  .ig-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.7,.2,1), opacity .4s; }
+  .ig-tile::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.4); opacity: 0; transition: opacity .35s; }
+  .ig-tile .glyph { position: absolute; top: 10px; right: 10px; width: 17px; height: 17px; border: 1.6px solid #fff; border-radius: 5px; opacity: 0; transform: scale(.8); transition: opacity .35s, transform .35s; z-index: 2; }
+  .ig-tile .glyph::after { content: ""; position: absolute; top: 3px; right: 3px; width: 4px; height: 4px; border-radius: 50%; border: 1.6px solid #fff; }
+  .ig-tile:hover img { transform: scale(1.06); }
+  .ig-tile:hover::after { opacity: 1; }
+  .ig-tile:hover .glyph { opacity: 1; transform: none; }
+
+  /* ============== CONTACT ============== */
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: clamp(34px,5vw,80px); align-items: stretch; }
+  @media (min-width: 920px){ .contact-grid { grid-template-columns: 1fr 1fr; } }
+  form .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  form input, form textarea {
+    width: 100%; background: transparent; color: var(--ink);
+    border: 1px solid var(--line); padding: 16px 16px; margin-top: 14px;
+    font-family: var(--f-body); font-size: 15px;
+    transition: border-color .3s;
+  }
+  form .frow input { margin-top: 0; }
+  form input:focus, form textarea:focus { outline: none; border-color: var(--teal); }
+  form input::placeholder, form textarea::placeholder { color: var(--ink-faint); }
+  form textarea { resize: vertical; min-height: 150px; }
+  .form-ok { color: var(--teal); font-family: var(--f-mono); font-size: 12px; letter-spacing:.12em; margin-top: 16px; min-height: 1.2em; }
+
+  /* ============== PALMARES ============== */
+  .palmares { background: var(--bg-soft); border-top: 1px solid var(--line); }
+  .timeline { border-top: 1px solid var(--line); }
+  .t-row { display: grid; grid-template-columns: 120px 1fr; gap: clamp(18px,4vw,60px); padding: 26px 0; border-bottom: 1px solid var(--line); }
+  .t-row .yr { font-family: var(--f-display); font-weight: 200; font-size: clamp(30px,4vw,52px); color: var(--teal); letter-spacing:.02em; }
+  .t-row ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; align-content: center; }
+  .t-row li { font-size: 16px; color: var(--ink-dim); }
+  .t-row li b { color: var(--ink); font-weight: 500; }
+  @media (max-width: 620px){ .t-row { grid-template-columns: 1fr; gap: 8px; } }
+
+  /* ============== FOOTER ============== */
+  footer { padding: clamp(60px,9vh,120px) var(--gut) 48px; }
+  .foot-top { display:flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 30px; }
+  .foot-name { font-size: clamp(40px,9vw,120px); }
+  .foot-social { display:flex; gap: 24px; }
+  .foot-social a { font-family: var(--f-mono); font-size: 12px; letter-spacing:.18em; text-transform: uppercase; color: var(--ink-dim); transition: color .3s; }
+  .foot-social a:hover { color: var(--teal); }
+  .foot-bottom { display:flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-top: 60px; padding-top: 26px; border-top: 1px solid var(--line); }
+  .foot-bottom span { font-family: var(--f-mono); font-size: 11px; letter-spacing:.1em; color: var(--ink-faint); }
+
+  /* ============== MOBILE NAV + SCROLL-SPY ============== */
+  .nav .links a.active { color: var(--teal); opacity: 1; }
+  .nav-toggle {
+    display: none; flex-direction: column; gap: 6px; width: 44px; height: 44px;
+    background: none; border: 0; cursor: pointer; padding: 0; align-items: center; justify-content: center; z-index: 70;
+  }
+  .nav-toggle span { width: 26px; }
+  .nav-toggle span { display: block; height: 1.5px; width: 100%; background: #fff; transition: transform .4s, opacity .3s; }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { transform: translateY(-7.5px) rotate(-45deg); }
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 60; background: #000;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 var(--gut); gap: 4px;
+    transform: translateY(-101%); transition: transform .55s cubic-bezier(.76,0,.24,1);
+  }
+  .mobile-menu.open { transform: none; }
+  .mobile-menu a {
+    font-family: var(--f-display); font-weight: 200; text-transform: uppercase;
+    letter-spacing: .06em; font-size: clamp(34px, 9vw, 58px); color: var(--ink);
+    padding: 14px 0; border-bottom: 1px solid var(--line); transition: color .3s;
+  }
+  .mobile-menu a:active, .mobile-menu a.active { color: var(--teal); }
+  @media (max-width: 760px){ .nav-toggle { display: flex; } }
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#000000"/>
+    <text x="50" y="52" font-family="Jost, system-ui, sans-serif" font-size="30" font-weight="300" letter-spacing="2" fill="#25e7c8" text-anchor="middle" dominant-baseline="central">DP</text>
+  </svg>
+</template>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="brand">Doriane&nbsp;Pin</a>
+  <div class="links" id="navLinks">
+    <a href="#actu">Actualités</a>
+    <a href="#elms">Calendrier</a>
+    <a href="#lemans">Le Mans</a>
+    <a href="#instagram">Instagram</a>
+    <a href="#galerie">Galerie</a>
+  </div>
+  <a class="nav-cta" href="#partenaires">Partenaires</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+</nav>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#actu">Actualités</a>
+  <a href="#elms">Calendrier</a>
+  <a href="#lemans">Le Mans</a>
+  <a href="#instagram">Instagram</a>
+  <a href="#galerie">Galerie</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top" data-screen-label="Hero">
+  <div class="hero__media">
+    <img src="assets/merc_car_front.jpg" alt="Doriane Pin — monoplace" />
+  </div>
+  <div class="hero__scrim"></div>
+  <div class="hero__inner">
+    <p class="eyebrow">Pilote automobile française</p>
+    <h1 class="display hero__name">Doriane<span class="pin">Pin</span></h1>
+    <div class="hero__sub">
+      <span class="stat"><b>Championne du monde</b> F1 Academy 2025</span>
+      <span class="stat">Pilote de développement <b>Mercedes-AMG&nbsp;F1</b></span>
+      <span class="stat">LMP2 · <b>Duqueine&nbsp;Team</b></span>
+    </div>
+  </div>
+  <div class="scrollcue">Défiler <span style="width:1px;height:34px;background:var(--ink-faint);"></span></div>
+</header>
+
+<!-- ============ INTRO ============ -->
+<section class="section-pad" id="intro">
+  <div class="wrap intro-grid">
+    <div data-reveal>
+      <p class="eyebrow" style="margin-bottom:30px;">Profil</p>
+      <p class="lede">De la monoplace au prototype — une trajectoire menée à pleine vitesse. À 22&nbsp;ans, Doriane Pin est championne du monde&nbsp;F1&nbsp;Academy 2025 et pilote prototype en endurance en 2026. Elle est également pilote de développement chez Mercedes-AMG&nbsp;PETRONAS F1&nbsp;Team.</p>
+      <div class="intro-body" style="margin-top:34px;">
+        <p>Née à Ivry-sur-Seine, elle fait ses débuts en karting et s'illustre ensuite en endurance et monoplace. Doriane Pin s'impose comme l'une des pilotes les plus complètes de sa génération&nbsp;: titrée en Ferrari&nbsp;Challenge Europe, victoire de catégorie aux 24&nbsp;Heures de Spa, podium dès ses débuts en LMP2, victoire en F4 — la polyvalence est sa signature.</p>
+        <p>En 2026, elle est pilote titulaire en LMP2 en ELMS et aux 24&nbsp;Heures du Mans chez Duqueine, avec des rôles de développement auprès de Mercedes-AMG&nbsp;PETRONAS Formula&nbsp;1&nbsp;Team, Peugeot&nbsp;TotalEnergies pour l'Hypercar, et Citroën&nbsp;Racing en Formule&nbsp;E.</p>
+      </div>
+    </div>
+    <div class="intro-portrait" data-reveal style="--d:120ms">
+      <img src="assets/doriane_profil_v3.png" alt="Doriane Pin — Mercedes-AMG PETRONAS F1 Team" />
+      <span class="ip-credit">Courtesy of Mercedes-AMG PETRONAS F1 Team</span>
+    </div>
+  </div>
+  <div class="wrap intro-facts" data-reveal style="--d:180ms">
+    <div class="ff"><span class="k">Nationalité</span><span class="v">Française</span></div>
+    <div class="ff"><span class="k">Née le</span><span class="v">6 janvier 2004 · Ivry-sur-Seine</span></div>
+    <div class="ff"><span class="k">Programme F1</span><span class="v accent">Mercedes-AMG PETRONAS</span></div>
+    <div class="ff"><span class="k">Endurance 2026</span><span class="v">ELMS LMP2 · Duqueine</span></div>
+  </div>
+</section>
+
+<!-- ============ ACTUALITÉS 2026 ============ -->
+<section class="section-pad" id="actu" data-screen-label="Actualités 2026">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="eyebrow" style="margin-bottom:22px;">Saison 2026</p>
+        <h2 class="display">Quatre<br>fronts</h2>
+      </div>
+      <p class="dim mono" style="font-size:12px;letter-spacing:.14em;max-width:30ch;">Formule 1 · Hypercar · Endurance · Formule E — la saison la plus dense de sa carrière.</p>
+    </div>
+
+    <div class="news-grid" data-reveal style="--d:80ms">
+      <article class="news-card">
+        <div class="card-top">
+          <img class="card-logo mercedes" src="assets/mercedes_logo.png" alt="Mercedes-AMG PETRONAS F1 Team" />
+          <span class="idx">01 / 04</span>
+        </div>
+        <span class="tag">Formule 1</span>
+        <h3>Pilote de développement Mercedes-AMG&nbsp;F1</h3>
+        <p>Après son titre mondial en F1&nbsp;Academy, Doriane intègre l'équipe de réservistes et de développement de Mercedes-AMG&nbsp;PETRONAS pour 2026. Un premier test au volant d'une Formule&nbsp;1 est en préparation.</p>
+        <div class="foot">Mercedes-AMG PETRONAS F1 Team</div>
+      </article>
+      <article class="news-card">
+        <div class="card-top">
+          <img class="card-logo duqueine" src="assets/duqueine_logo.png" alt="Duqueine Team" />
+          <span class="idx">02 / 04</span>
+        </div>
+        <span class="tag">Endurance · LMP2</span>
+        <h3>Retour en endurance avec Duqueine</h3>
+        <p>« Pocket&nbsp;Rocket » signe au Duqueine&nbsp;Team comme troisième pilote en European&nbsp;Le&nbsp;Mans&nbsp;Series 2026, en catégorie LMP2&nbsp;PRO/AM, au volant d'un prototype Oreca&nbsp;07.</p>
+        <div class="foot">Duqueine Team · ELMS</div>
+      </article>
+      <article class="news-card">
+        <div class="card-top">
+          <img class="card-logo peugeot" src="assets/peugeot_logo.png" alt="Team Peugeot TotalEnergies" />
+          <span class="idx">03 / 04</span>
+        </div>
+        <span class="tag">Hypercar · WEC</span>
+        <h3>Développement de la Peugeot&nbsp;9X8</h3>
+        <p>Doriane rejoint le Team Peugeot&nbsp;TotalEnergies comme pilote de développement de l'Hypercar&nbsp;9X8. Sessions simulateur puis premier roulage lors du Rookie&nbsp;Test du FIA&nbsp;WEC à Bahreïn, en novembre&nbsp;2026.</p>
+        <div class="foot">Team Peugeot TotalEnergies</div>
+      </article>
+      <article class="news-card">
+        <div class="card-top">
+          <img class="card-logo citroen" src="assets/citroen_racing_logo.png" alt="Citroën Racing" />
+          <span class="idx">04 / 04</span>
+        </div>
+        <span class="tag">Formule E · ABB FIA</span>
+        <h3>Pilote de développement Citroën&nbsp;Racing</h3>
+        <p>Doriane rejoint Citroën&nbsp;Racing comme pilote de développement officielle pour le Championnat du Monde ABB&nbsp;FIA de Formule&nbsp;E. Elle contribue à l'optimisation du futur package&nbsp;GEN4 et disposera de plusieurs opportunités de prise en main en piste dans les mois à venir.</p>
+        <div class="foot">Citroën Racing · Formule E</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ELMS CALENDAR ============ -->
+<section class="section-pad" id="elms" data-screen-label="Calendrier ELMS 2026" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="cal-head" data-reveal>
+      <p class="eyebrow">Calendrier · LMP2</p>
+      <h2 class="display" style="font-size:clamp(32px,5vw,64px);">European Le&nbsp;Mans Series 2026</h2>
+      <p class="mono dim cal-note" style="font-size:12px;letter-spacing:.14em;">Duqueine Team · Oreca 07 · 6 manches de 4 heures</p>
+    </div>
+
+    <div class="cal" data-reveal style="--d:60ms">
+      <div class="cal-row test">
+        <span class="rnd">Test</span>
+        <span class="date">06–07 AVR</span>
+        <span class="ev">Prologue</span>
+        <span class="track">Circuit de Barcelona-Catalunya</span>
+        <span class="cc">ESP</span>
+      </div>
+      <div class="cal-row">
+        <span class="rnd">01</span>
+        <span class="date">12 AVR</span>
+        <span class="ev">4 Heures de Barcelone</span>
+        <span class="track">Circuit de Barcelona-Catalunya</span>
+        <span class="cc">ESP</span>
+      </div>
+      <div class="cal-row">
+        <span class="rnd">02</span>
+        <span class="date">03 MAI</span>
+        <span class="ev">4 Heures du Castellet</span>
+        <span class="track">Circuit Paul Ricard</span>
+        <span class="cc">FRA</span>
+      </div>
+      <div class="cal-row">
+        <span class="rnd">03</span>
+        <span class="date">05 JUIL</span>
+        <span class="ev">4 Heures d'Imola</span>
+        <span class="track">Autodromo Enzo e Dino Ferrari</span>
+        <span class="cc">ITA</span>
+      </div>
+      <div class="cal-row">
+        <span class="rnd">04</span>
+        <span class="date">23 AOÛT</span>
+        <span class="ev">4 Heures de Spa-Francorchamps</span>
+        <span class="track">Circuit de Spa-Francorchamps</span>
+        <span class="cc">BEL</span>
+      </div>
+      <div class="cal-row">
+        <span class="rnd">05</span>
+        <span class="date">13 SEP</span>
+        <span class="ev">4 Heures de Silverstone</span>
+        <span class="track">Silverstone Circuit</span>
+        <span class="cc">GBR</span>
+      </div>
+      <div class="cal-row">
+        <span class="rnd">06</span>
+        <span class="date">10 OCT</span>
+        <span class="ev">4 Heures de Portimão</span>
+        <span class="track">Autódromo Internacional do Algarve</span>
+        <span class="cc">POR</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LE MANS ============ -->
+<section class="lemans section-pad" id="lemans" data-screen-label="24 Heures du Mans 2026">
+  <div class="wrap lemans-grid">
+    <div data-reveal>
+      <div class="media"><img src="assets/g2_3845.jpg" alt="Duqueine Team LMP2 Oreca 07" /></div>
+      <p class="slot-credit">Courtesy of Duqueine Team</p>
+    </div>
+    <div data-reveal style="--d:120ms">
+      <p class="eyebrow" style="margin-bottom:26px;">Le sommet de l'année · 94ᵉ édition</p>
+      <h2 class="display" style="font-size:clamp(30px,4.5vw,58px);margin-bottom:18px;">24 Heures<br>du Mans</h2>
+      <div class="big-date">13–14<span class="mo">Juin 2026</span></div>
+      <p style="margin-top:28px;">Le rendez-vous mythique de l'endurance mondiale, sur le Circuit&nbsp;des&nbsp;24&nbsp;Heures de la Sarthe. Objectif majeur de la saison d'endurance de Doriane, dans le prolongement de son programme LMP2.</p>
+      <div class="meta">
+        <div><span>Circuit</span><b>La Sarthe · Le Mans</b></div>
+        <div><span>Semaine</span><b>10 — 14 juin 2026</b></div>
+        <div><span>Catégorie</span><b>LMP2 · Oreca 07</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVENIR PARTENAIRE + CONTACT ============ -->
+<section class="section-pad" id="partenaires" data-screen-label="Devenir partenaire">
+  <div class="wrap contact-grid">
+    <div data-reveal>
+      <p class="eyebrow" style="margin-bottom:26px;">Partenaires</p>
+      <h2 class="display" style="font-size:clamp(32px,5vw,64px);margin-bottom:24px;">Devenir<br>partenaire</h2>
+      <p class="dim" style="max-width:44ch;">Devenir partenaire de Doriane Pin, c'est associer votre marque à une compétitrice d'exception qui redéfinit les codes du sport automobile&nbsp;: visibilité internationale, contenu exclusif et une histoire qui s'écrit à pleine vitesse.</p>
+    </div>
+    <div data-reveal style="--d:120ms">
+      <p class="eyebrow" style="margin-bottom:26px;">Contactez Doriane</p>
+      <h2 class="display" style="font-size:clamp(32px,5vw,64px);margin-bottom:8px;">Un mot<br>pour Doriane</h2>
+      <p class="dim" style="max-width:40ch;margin-top:18px;">Écrivez directement à Doriane et à son équipe.</p>
+      <form id="contactForm" style="margin-top:34px;">
+        <div class="frow">
+          <input type="text" name="nom" placeholder="Nom" required />
+          <input type="email" name="email" placeholder="E-mail" required />
+        </div>
+        <input type="text" name="objet" placeholder="Objet" />
+        <textarea name="message" placeholder="Rédigez votre message ici…" required></textarea>
+        <div style="margin-top:22px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;">
+          <button type="submit" class="btn btn-solid">Envoyer <span class="ar">→</span></button>
+          <span class="form-ok" id="formOk"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PALMARÈS ============ -->
+<section class="palmares section-pad" id="palmares" data-screen-label="Palmarès">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="eyebrow" style="margin-bottom:22px;">Palmarès</p>
+        <h2 class="display">Le parcours</h2>
+      </div>
+      <p class="mono dim" style="font-size:12px;letter-spacing:.14em;">Du karting au mondial F1 Academy.</p>
+    </div>
+    <div class="timeline" data-reveal style="--d:60ms">
+      <div class="t-row"><div class="yr">2026</div><ul>
+        <li>Pilote de développement <b>Mercedes-AMG PETRONAS F1 Team</b></li>
+        <li>Pilote de développement Hypercar <b>Peugeot TotalEnergies 9X8</b></li>
+        <li>ELMS <b>LMP2</b> avec le <b>Duqueine Team</b></li>
+      </ul></div>
+      <div class="t-row"><div class="yr">2025</div><ul>
+        <li><b>Championne du monde F1 Academy</b> — titre décroché à Las Vegas</li>
+        <li>Deux saisons en F1 Academy : 7 victoires, 9 podiums, 5 pole positions</li>
+      </ul></div>
+      <div class="t-row"><div class="yr">2024</div><ul>
+        <li>Intègre le <b>programme junior Mercedes-AMG F1</b></li>
+        <li>F1 Academy avec Prema · <b>Formule Régionale Européenne (FRECA)</b> avec les Iron Dames</li>
+        <li>WEC <b>LMGT3</b> avec les Iron Dames</li>
+      </ul></div>
+      <div class="t-row"><div class="yr">2023</div><ul>
+        <li>WEC <b>LMP2</b> avec Prema Racing · <b>podium dès ses débuts</b> (1000 Miles de Sebring)</li>
+        <li><b>Révélation de l'année</b> du WEC · 24 Heures du Mans du Centenaire</li>
+      </ul></div>
+      <div class="t-row"><div class="yr">2022</div><ul>
+        <li><b>Championne Ferrari Challenge Europe</b> Trofeo Pirelli</li>
+        <li>Vainqueur de catégorie (Gold) aux <b>24 Heures de Spa</b> · débuts en WEC</li>
+      </ul></div>
+      <div class="t-row"><div class="yr">2019</div><ul>
+        <li><b>Championne de France de karting</b> · sélectionnée FIA « Girls on Track – Rising Stars »</li>
+        <li>2021 — Premier contrat professionnel avec les <b>Iron Dames</b></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="section-pad" id="instagram" data-screen-label="Instagram" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="ig-head" data-reveal>
+      <div class="ig-id">
+        <div class="ig-ring"><img src="assets/g2_4251.jpg" alt="Portrait de Doriane Pin" /></div>
+        <div>
+          <a class="ig-handle" href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener">@dorianepin</a>
+          <div class="ig-stats">
+            <span><b>436K</b> abonnés</span>
+            <span><b>Pilote</b> automobile</span>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-solid" href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener">Suivre <span class="ar">→</span></a>
+    </div>
+    <div class="ig-grid" data-reveal style="--d:60ms">
+      <a class="ig-tile" href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener"><span class="glyph"></span><img src="assets/g2_3845.jpg" alt="Doriane Pin au volant de son LMP2 Duqueine Team" /></a>
+      <a class="ig-tile" href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener"><span class="glyph"></span><img src="assets/merc_cockpit_helmet.jpg" alt="Doriane Pin casquée dans le cockpit" /></a>
+      <a class="ig-tile" href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener"><span class="glyph"></span><img src="assets/g2_3831.jpg" alt="Doriane Pin sur le podium ELMS" style="object-position:center 30%;" /></a>
+      <a class="ig-tile" href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener"><span class="glyph"></span><img src="assets/g2_hamilton.jpg" alt="Doriane Pin aux côtés de Lewis Hamilton" style="object-position:center 22%;" /></a>
+      <a class="ig-tile" href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener"><span class="glyph"></span><img src="assets/merc_car_front.jpg" alt="Doriane Pin au volant de sa monoplace Mercedes-AMG" /></a>
+      <a class="ig-tile" href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener"><span class="glyph"></span><img src="assets/g2_3901.jpg" alt="Doriane Pin avec le Duqueine Team" /></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIE ============ -->
+<section class="section-pad" id="galerie" data-screen-label="Galerie">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="eyebrow" style="margin-bottom:22px;">Galerie</p>
+        <h2 class="display">En piste</h2>
+      </div>
+      <p class="mono dim" style="font-size:11px;letter-spacing:.14em;max-width:34ch;">Déposez vos photos dans chaque cadre · pensez à créditer le ou la photographe.</p>
+    </div>
+    <div class="gallery" data-reveal style="--d:60ms">
+      <figure class="g-tall"><img src="assets/merc_helmet_top.jpg" alt="Casque de course de Doriane Pin, vue de dessus" /></figure>
+      <figure class="g-wide"><img src="assets/merc_car_side.jpg" alt="Monoplace Mercedes-AMG de Doriane Pin en piste, vue latérale" style="object-position:center;" /></figure>
+      <figure><img src="assets/g2_3831.jpg" alt="Podium ELMS" style="object-position:center 30%;" /></figure>
+      <figure><img src="assets/merc_car_garage.jpg" alt="Monoplace de Doriane Pin au stand Mercedes-AMG" /></figure>
+      <figure class="g-wide"><img src="assets/merc_cockpit_helmet.jpg" alt="Doriane Pin dans le cockpit, casque Mercedes-AMG" /></figure>
+      <figure class="g-tall"><img src="assets/g2_hamilton.jpg" alt="Doriane Pin et Lewis Hamilton" style="object-position:center 25%;" /></figure>
+      <figure><img src="assets/g2_3901.jpg" alt="Duqueine Team" /></figure>
+      <figure><img src="assets/merc_car_front.jpg" alt="Monoplace Mercedes-AMG de Doriane Pin, vue de face" style="object-position:center 40%;" /></figure>
+    </div>
+    <p class="slot-credit" style="margin-top:18px;">Photos « courtesy of » Mercedes-AMG PETRONAS F1 Team, Duqueine Team &amp; Team Peugeot TotalEnergies.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap" style="padding-inline:0;">
+    <div class="foot-top">
+      <h2 class="display foot-name">Doriane<span style="color:var(--teal);">.</span></h2>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/dorianepin/" target="_blank" rel="noopener">Instagram · 436K</a>
+        <a href="#partenaires">Partenaires</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Doriane Pin · Pilote automobile</span>
+      <span>Site one-pager · Maquette de présentation</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // nav solid on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('solid', window.scrollY > window.innerHeight * 0.7);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // mobile menu
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('mobileMenu');
+  const setMenu = (open) => {
+    toggle.classList.toggle('open', open);
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  // scroll-spy: highlight current section in nav
+  const navLinks = [...document.querySelectorAll('#navLinks a, #mobileMenu a')];
+  const ids = ['actu','elms','lemans','partenaires','palmares','instagram','galerie'];
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ids.forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+  // contact form (front-end only)
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('formOk').textContent = '✓ Merci — message prêt à être envoyé.';
+    form.reset();
+  });
+</script>
+</body>
+</html>
