@@ -194,8 +194,7 @@
 
   .nav .links a.active { color: var(--teal); opacity: 1; }
   .nav-toggle { display: none; flex-direction: column; gap: 6px; width: 44px; height: 44px; background: none; border: 0; cursor: pointer; padding: 0; align-items: center; justify-content: center; z-index: 70; }
-  .nav-toggle span { width: 26px; }
-  .nav-toggle span { display: block; height: 1.5px; width: 100%; background: #fff; transition: transform .4s, opacity .3s; }
+  .nav-toggle span { display: block; height: 1.5px; width: 18px; background: #fff; transition: transform .4s, opacity .3s; }
   .nav-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
   .nav-toggle.open span:nth-child(2) { transform: translateY(-7.5px) rotate(-45deg); }
   .mobile-menu { position: fixed; inset: 0; z-index: 60; background: #000; display: flex; flex-direction: column; justify-content: center; padding: 0 var(--gut); gap: 4px; transform: translateY(-101%); transition: transform .55s cubic-bezier(.76,0,.24,1); }
@@ -209,7 +208,7 @@
   .lang-switch a:hover { color: var(--ink); }
   .lang-switch span { color: var(--line); }
   .mobile-menu .lang-switch { border-bottom: none; padding: 22px 0 0; font-size: 15px; gap: 12px; }
-  @media (max-width: 760px){ .nav .lang-switch { display: none; } }
+  @media (max-width: 760px){ .nav .lang-switch { display: flex; order: 2; margin-left: 12px; } .nav-toggle { margin-left: auto; } }
 </style>
 </head>
 <body>
