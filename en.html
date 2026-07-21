@@ -208,7 +208,12 @@
   .lang-switch a:hover { color: var(--ink); }
   .lang-switch span { color: var(--line); }
   .mobile-menu .lang-switch { border-bottom: none; padding: 22px 0 0; font-size: 15px; gap: 12px; }
-  @media (max-width: 760px){ .nav .lang-switch { display: flex; order: 2; margin-left: 12px; } .nav-toggle { margin-left: auto; } }
+  @media (max-width: 760px){
+    .nav .brand { font-size: 13px; letter-spacing: .2em; }
+    .nav-cta { display: inline-flex; order: 1; margin-left: auto; padding: 7px 11px; font-size: 9.5px; letter-spacing: .12em; }
+    .nav .lang-switch { display: flex; order: 2; margin-left: 12px; }
+    .nav-toggle { order: 3; margin-left: 10px; }
+  }
 </style>
 </head>
 <body>
