@@ -442,7 +442,8 @@
       <p class="eyebrow" style="margin-bottom:26px;">Contact Doriane</p>
       <h2 class="display" style="font-size:clamp(32px,5vw,64px);margin-bottom:8px;">A word<br>for Doriane</h2>
       <p class="dim" style="max-width:40ch;margin-top:18px;">Write directly to Doriane and her team.</p>
-      <form id="contactForm" style="margin-top:34px;">
+      <form id="contactForm" name="contact" method="POST" data-netlify="true" style="margin-top:34px;">
+        <input type="hidden" name="form-name" value="contact" />
         <div class="frow">
           <input type="text" name="nom" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
@@ -630,10 +631,19 @@
   document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
   const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.getElementById('formOk').textContent = '✓ Thanks — your message is ready to send.';
-    form.reset();
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+      document.getElementById('formOk').textContent = '✓ Thanks — your message has been sent.';
+      form.reset();
+    } catch (err) {
+      document.getElementById('formOk').textContent = '✗ Something went wrong. Please try again.';
+    }
   });
 </script>
 </body>

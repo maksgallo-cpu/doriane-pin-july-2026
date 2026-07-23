@@ -509,7 +509,8 @@
       <p class="eyebrow" style="margin-bottom:26px;">Contactez Doriane</p>
       <h2 class="display" style="font-size:clamp(32px,5vw,64px);margin-bottom:8px;">Un mot<br>pour Doriane</h2>
       <p class="dim" style="max-width:40ch;margin-top:18px;">Écrivez directement à Doriane et à son équipe.</p>
-      <form id="contactForm" style="margin-top:34px;">
+      <form id="contactForm" name="contact" method="POST" data-netlify="true" style="margin-top:34px;">
+        <input type="hidden" name="form-name" value="contact" />
         <div class="frow">
           <input type="text" name="nom" placeholder="Nom" required />
           <input type="email" name="email" placeholder="E-mail" required />
@@ -700,12 +701,21 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
-  // contact form (front-end only)
+  // contact form → Netlify Forms
   const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.getElementById('formOk').textContent = '✓ Merci — message prêt à être envoyé.';
-    form.reset();
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+      document.getElementById('formOk').textContent = '✓ Merci — votre message a été envoyé.';
+      form.reset();
+    } catch (err) {
+      document.getElementById('formOk').textContent = '✗ Une erreur est survenue. Veuillez réessayer.';
+    }
   });
 </script>
 </body>
