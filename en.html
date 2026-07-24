@@ -599,7 +599,16 @@
 
 <script>
   const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('solid', window.scrollY > window.innerHeight * 0.7);
+  let lastY = window.scrollY;
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('solid', y > window.innerHeight * 0.7);
+    // hide header while scrolling down the page, reveal on scroll up
+    const menuOpen = document.getElementById('mobileMenu').classList.contains('open');
+    if (!menuOpen && y > lastY && y > 80) nav.classList.add('hide');
+    else nav.classList.remove('hide');
+    lastY = y;
+  };
   onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
 
   const toggle = document.getElementById('navToggle');
