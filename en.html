@@ -444,6 +444,7 @@
       <p class="dim" style="max-width:40ch;margin-top:18px;">Write directly to Doriane and her team.</p>
       <form id="contactForm" name="contact" method="POST" data-netlify="true" style="margin-top:34px;">
         <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="subject" value="New message from the website" />
         <div class="frow">
           <input type="text" name="nom" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
@@ -642,6 +643,9 @@
   const form = document.getElementById('contactForm');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    // use the visitor's "objet" as the notification email subject
+    const objet = form.elements.objet.value.trim();
+    form.elements.subject.value = objet || 'New message from the website';
     try {
       await fetch('/', {
         method: 'POST',
